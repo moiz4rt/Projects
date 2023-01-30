@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --cyan: hsl(179, 62%, 43%);
+  --lightcyan: hsl(179, 42%, 50%);
+  --yellow: hsl(71, 73%, 54%);
+  --gray: hsl(204, 43%, 93%);
+  --lightgray: hsl(204, 100%, 80%);
+  --blue: hsl(218, 22%, 67%);
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--gray);
+  min-height: 100vh;
+  width: 100vw;
+  font-family: 'Karla', sans-serif;
+  font-size: 1.6rem;
+}
+
+.cards {
+  max-width: 840px;
+}
+
+.card-first {
+  background-color: white;
+  padding: 3rem;
+}
+
+.card-first-title {
+  color: var(--cyan);
+  margin-bottom: 2rem;
+}
+
+.card-first-subtitle {
+  color: var(--yellow);
+  margin-bottom: 2rem;
+}
+
+.card-first-content {
+  color: var(--blue);
+  line-height: 2;
+}
+
+.card-second {
+  background-color: var(--cyan);
+  padding: 3rem;
+  color: var(--gray);
+}
+
+.card-second-title {
+  margin-bottom: 2rem;
+}
+
+.card-second-price {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.card-second-previous {
+  font-size: 1.6rem;
+  position: relative;
+  top: -.5rem;
+  margin-left: .5rem;
+  color: var(--lightgray);
+}
+
+.card-second-content {
+  margin-bottom: 2.5rem;
+}
+
+.card-second-button {
+  width: 100%;
+  max-width: 36rem;
+  padding: 1.2rem 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border:none;
+  border-radius: .5rem;
+  color: var(--gray);
+  background-color: var(--yellow);
+  cursor: pointer;
+  box-shadow: 0 0 8px #00000066;
+}
+
+.card-second-button:hover {
+  background-color: hsl(71, 73%, 44%);
+  color: white;
+}
+
+.card-second-button:active {
+  transform: translateY(3%);
+}
+
+.card-third {
+  background-color: var(--lightcyan);
+  color: var(--gray);
+  padding: 3rem;
+  margin-bottom: .5rem;
+}
+
+.card-third-title {
+  margin-bottom: 2rem;
+}
+
+.card-third-content {
+  line-height: 1.5;
+}
+
+footer {
+  font-size: 1.4rem;
+  width: max-content;
+  margin: auto;
+}
+
+@media screen and (min-width: 28rem) {  
+  .cards {
+    width: 70vw;
+    margin: 5rem auto;
+  }
+}
+
+@media screen and (min-width: 37rem) {
+  body {
+    font-size: 1.2rem;
+  }
+  
+  .cards {
+    display: grid;
+    width: 80vw;
+    height: 80vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .cards > * {
+    height: 100%;
+  }
+  
+  .card-first {
+    grid-column: span 2;
+  }
+  
+  .card-third {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 70rem) {
+  body {
+    font-size: 1.6rem;
+  }
+  
+  .cards {
+    height: 90vh;
+  }
+  
+  .card-second > *:not(button) {
+    margin-bottom: 3rem;
+  }
+}
